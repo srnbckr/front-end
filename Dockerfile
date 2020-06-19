@@ -5,8 +5,11 @@ EXPOSE 8079
 RUN addgroup mygroup && adduser -D -G mygroup myuser && mkdir -p /usr/src/app && chown -R myuser /usr/src/app
 
 # install fault injection binaries
-RUN apk update && apk add git stress-ng cpulimit bash
+RUN apk update && apk add --no-cache stress-ng cpulimit bash python3 py-pip iproute2
 COPY fault-injection /opt/fault-injection
+
+# install tcconfig
+RUN pip install tcconfig
 
 # Prepare app directory
 WORKDIR /usr/src/app
