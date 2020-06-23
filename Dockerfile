@@ -8,6 +8,8 @@ RUN addgroup mygroup && adduser --disabled-password --gecos '' --ingroup mygroup
 RUN apt-get update && apt-get install -y \
     make \
     gcc \
+    stress-ng \
+    cpulimit \
     python3 \
     python3-pip \
 && rm -rf /var/lib/apt/lists/*
