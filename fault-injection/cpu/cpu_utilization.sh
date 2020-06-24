@@ -2,8 +2,8 @@
 
 MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
 
-PATH_TO_STRESS_NG="stress-ng"
-PATH_TO_CPULIMIT="cpulimit"
+PATH_TO_STRESS_NG=$"$MY_PATH/stress-ng/stress-ng"                                                                                                                                                                            
+PATH_TO_CPULIMIT=$"$MY_PATH/cpulimit/src/cpulimit"
 
 OP_MODE_CPU_UTIL_GROW=0
 OP_MODE_CPU_UTIL_SHRINK=1
